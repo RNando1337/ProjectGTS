@@ -53,8 +53,10 @@ function addBarang(){
 
 function search(){
     global $db;
-    
-
+    $brg = $_GET['cari'];
+    $sql = "SELECT * FROM barang WHERE nama_barang like '%$brg%'";
+    $stmt = $db->query($sql);
+    return $stmt;
 }
 
 

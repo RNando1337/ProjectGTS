@@ -5,6 +5,7 @@ require 'application/function.php';
 
 ?>
 
+
 <html>
     <head>
     <title>Online Shop</title>
@@ -29,7 +30,7 @@ require 'application/function.php';
             }
 
             .garisX{
-                height: 1px;
+                height: 1.5px;
                 background: #e0e0e0;
             }
 
@@ -50,7 +51,6 @@ require 'application/function.php';
             font-weight: bold;
             }
 
-            
             select{
             border: 0;
             margin: 2px;
@@ -79,27 +79,66 @@ require 'application/function.php';
             }
 
             .box{
+                box-model: border-box;
                 background-clip:padding-box;
-            }
-
-            .fullwidth{
-                width:100%;
-            }
-
-            .qty{
-                width:25%;
-                height:30%;
-                border-radius:2px 2px;
-                border:none;
             }
         
       </style>
+
     </head>
         <body>
+
         <?php
             require 'header.php';
         ?>
 
 
-</body>
+<!-- Product -->
+
+    <div class="container-fluid p-4">
+    <h5>Daftar Barang</h5>
+    <div class="garisX mb-1"></div>
+        <div class="row">
+         <?php
+            $barang = search();
+            while($row = $barang->fetch(PDO::FETCH_ASSOC)){
+         ?>
+            <!-- Barang list -->
+        <div class="col-2 mb-3 box">
+            <div class="w-100 h-75">
+                    <a href="detail.php?id=<? echo $row['nama_barang']; ?>"><div class="card mt-3 p-1">
+                        <img class="card-img-top" src="gambar/<? echo $row['gambar']; ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h6 class="card-title text-muted ml-n3 mt-n3" style="color:black"><? echo $row['nama_barang']; ?></h6>
+                            <h6 class="card-subtitle ml-n3 mt-n2" style="color:#0277bd;">Rp. <? echo $row['harga_barang']; ?></h6>
+                            <p class="card-text"></p>
+                            <button type="button" class="btn btn-blue darken-4 btn-sm mr-n3 mb-n3 mt-n3 pl-2 pr-2 float-right">Lihat Detail</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    <?php
+            }
+            ?>
+        
+        
+    <!-- Barang list -->
+
+        </div>
+    </div>
+
+<!--/.Product-->
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="mdbootstrap/js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="mdbootstrap/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="mdbootstrap/js/mdb.min.js"></script>
+
+  <!--/.EndJavascript-->
+        </body>
 </html>
