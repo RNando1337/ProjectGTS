@@ -176,15 +176,6 @@ require 'application/function.php';
 
            
 
-            <script>
-                $(.stok button).change(function){
-                    updateStok(this);
-                }
-
-                function updateStok(stok){
-                    var row = $(stok).parent().parent();
-                }
-            </script>
 
   <!-- Javascript -->
   <script type="text/javascript" src="mdbootstrap/js/jquery.min.js"></script>
