@@ -5,11 +5,11 @@ function login(){
     global $db;
     $user = $_POST['user'];
     $pass = md5($_POST['password']);
-    $sql = "select email,username from pengguna where email=$user OR username=$user";
+    $sql = "select email,username from pengguna where email='$user' || username='$user' && password='$pass'";
     $stmt = $db->query($sql);
     if($stmt->fetch(PDO::FETCH_ASSOC)){
         $_SESSION['username'] = $user;
-        header("location:index.php");
+        echo "<script> document.location.href='index.php';</script>";
     }
     return $stmt->rowCount();
 }

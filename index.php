@@ -1,4 +1,6 @@
 <?php
+session_start();
+echo var_dump($_SESSION);
 require 'application/config.php';
 require 'application/function.php';
 

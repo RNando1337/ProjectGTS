@@ -62,7 +62,7 @@
       </li>
       <div class="garisY"></div>
       <?php 
-        if(isset($_SESSION['pengguna'])){
+        if(isset($_SESSION['username'])){
             require 'isLogin.php';
         }else{
             require 'isNotLogin.php';
