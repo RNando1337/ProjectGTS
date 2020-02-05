@@ -61,9 +61,24 @@ function search(){
 
 function loginadmin(){
     global $db;
-    
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
+    $sql = "select * from useradmin where username='$user' AND password='$pass'";
+    $stmt = $db->query($sql);
+    if($stmt->fetch(PDO::FETCH_ASSOC)){
+        $_SESSION['admin'] = $user;
+        echo "<script> document.location.href='dashboard.php';</script>";
+    }
+    return $stmt->rowCount();
 }
 
+
+function daftPengguna(){
+    global $db;
+    $sql = "select * from pengguna";
+    $stmt = $db->query($sql);
+    return $stmt;
+}
 
 
 

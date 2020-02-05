@@ -181,7 +181,7 @@ while($data = $barang->fetch(PDO::FETCH_ASSOC)){
         <td><? echo $data['deskripsi']; ?></td>
         <td><? echo $data['harga_barang']; ?></td>
         <td><a href='edit.php?barang=<? echo $data['nama_barang']; ?>'><i class='fas fa-edit' style='color: green;'></i>
-                </a>&nbsp<a href='hapus?barang.php=<? echo $data['nama_barang']; ?>'><i class='far fa-times-circle' style='color: red;'></i>
+                </a>&nbsp<a href='hapus.php?barang=<? echo $data['nama_barang']; ?>'><i class='far fa-times-circle' style='color: red;'></i>
                 </a></td>
   </tr>
   </tbody>
