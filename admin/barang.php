@@ -1,6 +1,8 @@
 <?php
+session_start();
 require '../application/config.php';
 require '../application/function.php';
+
 
 if (isset($_POST["Simpan"])) {
   $ekstensi_diperbolehkan    = array('png', 'jpg', 'jpeg');
