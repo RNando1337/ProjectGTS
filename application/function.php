@@ -51,6 +51,11 @@ function addBarang(){
 }
 
 
+function search(){
+    global $db;
+}
+
+
 
 
 ?>

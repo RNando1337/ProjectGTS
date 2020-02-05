@@ -17,7 +17,7 @@
         <option value="all">Buku</option>
     </select>
     <input class="w-responsive pl-1" type="text" style="border: 0px; outline:none; flex: 1; font-size: 15px" maxlength="50" placeholder="Search">
-    <a class="input-group-text light-blue darken-3 float-right" id="basic-addon11" style="border: 0px;"><i class="fas fa-search" style="color:white;"></i></a>
+    <button type="submit" class="input-group-text light-blue darken-3 float-right" id="basic-addon11" style="border: 0px;"><i class="fas fa-search" style="color:white;"></i></button>
   </form>
 <!-- Default form subscription -->
 

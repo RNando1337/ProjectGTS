@@ -1,3 +1,10 @@
+<?php
+session_start();
+require 'application/config.php';
+require 'application/function.php';
+
+?>
+
 <html>
     <head>
     <title>Online Shop</title>

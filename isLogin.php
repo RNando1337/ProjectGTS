@@ -17,7 +17,7 @@ $hasil = $stmt->fetch(PDO::FETCH_ASSOC);
         <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
           aria-labelledby="navbarDropdownMenuLink-55">
           <a class="dropdown-item" href="#">Profile</a>
-          <a class="dropdown-item" href="#">Logout</a>
+          <a class="dropdown-item" href="logout.php">Logout</a>
         </div>
       </li>
 
