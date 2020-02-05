@@ -63,9 +63,9 @@
       <div class="garisY"></div>
       <?php 
         if(isset($_SESSION['username'])){
-            require 'isLogin.php';
+            require_once 'isLogin.php';
         }else{
-            require 'isNotLogin.php';
+            require_once 'isNotLogin.php';
         }
       ?>
     </ul>
