@@ -59,6 +59,11 @@ function search(){
     return $stmt;
 }
 
+function loginadmin(){
+    global $db;
+    
+}
+
 
 
 
